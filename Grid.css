@@ -10,7 +10,7 @@
     --text-color: #000000;
     --data-grid-th: #b4b2b2;
     /* رنگ متن لایت */
-    --thead-color: red;
+    --thead-color: #ae00ff;
     --th-hover: blue;
 }
 
@@ -70,10 +70,12 @@ body {
     background-color: var(--data-grid-th);
     color: var(--text-color);
 }
+
 .data-Grid tbody tr {
     color: var(--text-color);
 }
+
 .data-Grid tbody tr:hover {
     background-color: var(--th-hover);
-   
+
 }
