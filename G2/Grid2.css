@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* :root{
+    --
+} */
+
+.Container {
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 10px;
+    align-content: center;
+    text-align: -webkit-center;
+    margin-top: 20px !important;
+    border-radius: 8px;
+}
+
+.Grid-Toolbar {
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.Filter {
+    display: inline;
+}
+
+.Search {
+    display: inline;
+    border-radius: 8px;
+}
+
+#Search-Txt {
+    border-radius: 8px;
+}
+
+#DataGrid {
+    width: 100%;
+}
+
+th {
+    text-align: justify;
+    margin-bottom: 12px;
+}

@@ -1,46 +1,115 @@
 <!DOCTYPE html>
-<html lang="fa">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Data Grid</title>
+    <style>
+        body {
+            background-color: #0a0a0f;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
 
-    <title>Theme Switcher</title>
+        .data-grid {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #14141c;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .data-grid table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-grid th, .data-grid td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .data-grid th {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #7a7a85;
+        }
+
+        .data-grid td {
+            font-size: 16px;
+        }
+
+        .data-grid tr:hover {
+            background-color: #1f1f2a;
+        }
+
+        .data-grid .token-name {
+            display: flex;
+            align-items: center;
+        }
+
+        .data-grid .token-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .connect-btn {
+            padding: 8px 16px;
+            border: 1px solid #5252ff;
+            background-color: transparent;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .connect-btn:hover {
+            background-color: #5252ff;
+        }
+    </style>
 </head>
-
 <body>
-    <button id="theme-toggle">تغییر تم</button>
-    <script src="script.js"></script>
+
+    <div class="data-grid">
+        <table>
+            <thead>
+                <tr>
+                    <th>Token Pair</th>
+                    <th>Type</th>
+                    <th>APY</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="token-name">
+                            <img src="https://via.placeholder.com/24" alt="Token 1" class="token-icon">
+                            Live/THE
+                        </div>
+                    </td>
+                    <td>Stable</td>
+                    <td>89.44%</td>
+                    <td><button class="connect-btn">Connect</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="token-name">
+                            <img src="https://via.placeholder.com/24" alt="Token 2" class="token-icon">
+                            Ankr/BNB
+                        </div>
+                    </td>
+                    <td>Narrow</td>
+                    <td>132.45%</td>
+                    <td><button class="connect-btn">Connect</button></td>
+                </tr>
+                <!-- Repeat similar rows as necessary -->
+            </tbody>
+        </table>
+    </div>
+
 </body>
-
-<style>
-    :root {
-        --background-color: #ffffff;
-        /* رنگ پس‌زمینه لایت */
-        --text-color: #000000;
-        /* رنگ متن لایت */
-    }
-
-    [data-theme='dark'] {
-        --background-color: #000000;
-        /* رنگ پس‌زمینه دارک */
-        --text-color: #ffffff;
-        /* رنگ متن دارک */
-    }
-
-    body {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
-</style>
-<script>
-    const toggleButton = document.getElementById('theme-toggle');
-
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-    });
-</script>
-
 </html>
